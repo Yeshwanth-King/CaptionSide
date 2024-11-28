@@ -8,6 +8,7 @@ import Footer from '@/components/landing/Footer';
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
+
       <Navbar />
       <HeroSection />
       <PopularEvents />

@@ -8,6 +8,7 @@ import { Toaster } from 'sonner';
 import { auth } from '@/auth';
 import type { CustomUser } from '@/types';
 import Footer from '@/components/landing/Footer';
+import { CartContextProvider } from '@/components/new/CardContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -63,8 +64,10 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${inter.className} text-white`}>
         <SessionProvider session={session}>
+          <CartContextProvider>
           <TanStackProvider>{children}</TanStackProvider>
           <Toaster position="top-right" richColors />
+          </CartContextProvider>
         </SessionProvider>
       </body>
     </html>

@@ -111,6 +111,19 @@ export default function Navbar({ bgColor = '#110219' }: NavbarProps) {
                 My Account
               </Link>
             )}
+            {session && (
+              <Link
+                href={`/marketPlace`}
+                className={`text-md ${
+                  activeLink === 'aboutUs'
+                    ? 'text-fuchsia-600'
+                    : 'hover:text-fuchsia-600'
+                }`}
+                onClick={() => handleLinkClick('Market Place')}
+              >
+                Market Place
+              </Link>
+            )}
           </div>
           <div className="hidden md:flex ml-20 md:items-center">
             <div className="relative flex items-center">
